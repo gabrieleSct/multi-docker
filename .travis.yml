@@ -12,10 +12,10 @@ script:
 
 #creo tutte le immagini di prod
 after_success:
- - docker build gabrielescotti/multi-client ./client
- - docker build gabrielescotti/multi-nginx ./nginx
- - docker build gabrielescotti/multi-server ./server
- - docker build gabrielescotti/multi-worker ./worker
+  - docker build gabrielescotti/multi-client ./client
+  - docker build gabrielescotti/multi-nginx ./nginx
+  - docker build gabrielescotti/multi-server ./server
+  - docker build gabrielescotti/multi-worker ./worker
   #log in al docker CLI (i valori sono presi dalle variabili d'ambiente create su travis CI)
   - echo "$DOCKER_PW" | docker login -u "$DOCKER_ID" --password-stdin
   #carito le immagini di prod su Docker hub
