@@ -4,7 +4,7 @@ WORKDIR '/app'
 #copia del file con le dipendenze
 COPY ./package.json ./
 #installa dipendenze
-RUN npm install
+RUN npm install latest
 #copia di tutto il resto dei files
 COPY . .
 #build degli assets per la produzione
