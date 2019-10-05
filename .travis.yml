@@ -8,7 +8,7 @@ before_install:
 
 #eseguo i test
 script:
-  - docker run gabrielescotti/react-test npm test -- --coverage
+  - docker run -e CI=true gabrielescotti/react-test npm test
 
 #creo tutte le immagini di prod
 after_success:
