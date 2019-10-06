@@ -24,7 +24,7 @@ after_success:
   - docker push gabrielescotti/multi-server
   - docker push gabrielescotti/multi-worker
 
-deply:
+deploy:
   provider: elasticbeanstalk
   region: us-east-2
   app: multi-docker
@@ -35,5 +35,5 @@ deply:
     branch: master
   access_key_id:
     secure: $AWS_ACCESS_KEY
-  secret_access-key:
+  secret_access_key:
     secure: $AWS_SECRET_KEY
